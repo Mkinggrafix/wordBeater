@@ -34,6 +34,7 @@ window.addEventListener('load', init);
 selectBox.addEventListener('change', selectLevel);
 checkScore.addEventListener('click', showHighScore);
 
+
 function init() {
     // Show second in the DOM
     second.innerHTML = currentLevel;
@@ -85,23 +86,15 @@ function startMatch() {
     };
 };
 
-function store() {
-    // console.log(score)
-    saveScore();
-}
-
-function showHighScore() {
-    high_score.classList.toggle('toggleScore')
-}
-
-
-function saveScore() {
-    localStorage.setItem('highscore', score)
+function lowerCase() {
+    
+    console.log(text)   
 }
 
 // Match Word
 function matchWord() {
-    if (wordInput.value == randomWord.innerText) {
+    let text = wordInput.value.toLowerCase();
+    if (text == randomWord.innerText) {
         output.innerText = 'Correct!!!';
         wordInput.classList.remove('gameout');
         return true;
@@ -128,3 +121,17 @@ function setCountDown() {
     };
     countDown.innerHTML = time;
 };
+
+function store() {
+    // console.log(score)
+    saveScore();
+}
+
+function showHighScore() {
+    high_score.classList.toggle('toggleScore')
+}
+
+
+function saveScore() {
+    localStorage.setItem('highscore', score)
+}
