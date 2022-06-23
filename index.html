@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Word Beater</title>
+</head>
+<body>
+    <header>
+        <h3>WordBeater</h3>
+    </header>
+    <div class="container">
+        <label for="selectBox">Select Level</label>
+        <select name="selectBox" class="selectBox" id="selectBox">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+
+        <p class="rule">Type the given word within <span id="second">5</span> seconds:</p>
+        <p class="word" id="word">mking</p>
+        <input type="text" name="word" placeholder="Start typing..." id="wordInput" class="wordInput">
+        <p class="output" id="output">Start Game!!!</p>
+        <div class="track" id="track">
+            <p class="time" >Time Left: <span id="countDown">5</span></p>
+            <p class="score">Score: <span id="score">0</span></p>
+        </div>
+        <div class="highscore">
+            <input type="button" value="Check Highscore" id="checkScore" class="checkScore">
+            <p class="high_score" id="high_score">Highscore: <span id="highscore">0</span></p>
+        </div>
+        <div class="instruct">
+            <h5>Instructions</h5>
+            <p>Type each word in a given amount of seconds to score. To play again, just type the currend word. Your score will reset.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
